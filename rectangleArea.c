@@ -30,4 +30,6 @@ int main()
     scanf("%d %d", &bob.lowerRight.x, &bob.lowerRight.y);
 
     printf("Your rectangle's area is %d\n", calculateArea(bob));
+
+    return 0;
 }
