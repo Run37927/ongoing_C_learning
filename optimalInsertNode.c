@@ -29,7 +29,11 @@ int main()
 
     ptr = head;
 
-
+    while (ptr != NULL)
+    {
+        printf("%d ", ptr->data);
+        ptr = ptr->link;
+    }
 
     return 0;
 }
