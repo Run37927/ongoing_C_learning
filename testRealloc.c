@@ -32,4 +32,8 @@ int main()
     for (i=0; i<4; i++) {
         printf("%d ", *(ptr + i));
     }
+
+    free(ptr);
+    ptr = NULL; // set it back to NULL because at this point ptr is a dangling pointer
+    return 0;
 }
