@@ -33,12 +33,12 @@ int main()
     head->link = NULL;
 
     struct node *current = (struct node *)malloc(sizeof(struct node));
-    current->data = 54;
+    current->data = 98;
     current->link = NULL;
     head->link = current;
 
     current = (struct node *)malloc(sizeof(struct node));
-    current->data = 78;
+    current->data = 3;
     current->link = NULL;
 
     head->link->link = current;
