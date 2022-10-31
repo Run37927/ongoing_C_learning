@@ -33,7 +33,7 @@ int main()
 
     int data = 3;
 
-    head = insertAtBegin(head, data);
+    head = insertAtBegin(head, data); // here head is PASS BY VALUE, we are passing the content of head, NOT THE ADDRESS OF HEAD
     ptr = head;
 
     while(ptr != NULL)
