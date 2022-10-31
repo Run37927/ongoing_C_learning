@@ -24,7 +24,7 @@ void printData(struct node *head)
 
 int main()
 {
-        struct node *head = (struct node *)malloc(sizeof(struct node));
+    struct node *head = (struct node *)malloc(sizeof(struct node));
     head->data = 45;
     head->link = NULL;
 
@@ -38,6 +38,6 @@ int main()
     current->link = NULL;
 
     head->link->link = current;
-    
+
     printData(head);
 }
