@@ -42,6 +42,5 @@ int main()
     }
 
     printData(head);
-
     return 0;
 }
