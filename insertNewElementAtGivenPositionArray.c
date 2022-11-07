@@ -48,3 +48,6 @@ int main()
 
     return 0;
 }
+
+
+// O(n) where n is size of original array
