@@ -30,15 +30,12 @@ void del_last(struct node *head)
         free(head);
         head = NULL;
     } else {
-        struct node *temp = head;
-        struct node *temp_two = head;
-        while (temp->link != NULL) {
-            temp_two = temp;
+        struct node* temp = head;
+        while(temp->link->link != NULL) {
             temp = temp->link;
         }
-        temp_two->link = NULL;
-        free(temp);
-        temp = NULL;
+        free(temp->link); // YOU CAN DO THIS TO FREE THE LAST NODE
+        temp->link = NULL;
     }
 }
 
