@@ -22,7 +22,7 @@ void insertAtEnd(struct node *head, int data)
     ptr->link = temp;
 }
 
-struct node * del_last(struct node *head)
+void del_last(struct node *head)
 {
     if (head == NULL) {
         printf("list is already empty!");
@@ -57,7 +57,7 @@ int main()
 
 
     // the delete part
-    head = del_last(head);
+    del_last(head); // head is not being modified so no need to return it. we are just deleting the last node
     struct node* ptr = head;
     while(ptr != NULL) {
         printf("%d ", ptr->data);
