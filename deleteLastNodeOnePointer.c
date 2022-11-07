@@ -62,3 +62,7 @@ int main()
 
     return 0;
 }
+
+
+// if there are n nodes in the list, then loop runs n-1 times
+// O(n)
