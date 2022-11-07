@@ -70,3 +70,8 @@ int main()
     }
     return 0;
 }
+
+
+
+// if there are n nodes in the list and we have to add a new node at n+1 position, then while loop will run n-1 times
+// O(n)
