@@ -39,6 +39,10 @@ int main()
     int size = sizeof(original_arr) / sizeof(original_arr[0]); // get the size of the array
 
     int new_arr[size + 1]; // create the new array
+
+    // passing new_arr to the function
+    // is equiv. of passing the address of first element in new array
+    // so the changes made inside that function will be reflected here in main
     insert_at_position(original_arr, new_arr, size, data, pos);
 
     for (int i = 0; i < size + 1; i++)
