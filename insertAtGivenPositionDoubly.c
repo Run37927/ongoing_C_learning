@@ -69,11 +69,17 @@ struct node * addAfterPosition(struct node *head, int data, int position)
         position--;
     }
 
-    temp2 = temp->next;
-    temp->next = newP;
-    temp2->prev = newP;
-    newP->next = temp2;
-    newP->prev = temp;
+    // if being asked to add after last position
+    if (temp->next == NULL) {
+        temp->next = newP;
+        newP->prev = temp;
+    } else {
+        temp2 = temp->next;
+        temp->next = newP;
+        temp2->prev = newP;
+        newP->next = temp2;
+        newP->prev = temp;
+    }
 
     return head;
 }
