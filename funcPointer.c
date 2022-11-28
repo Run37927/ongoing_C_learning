@@ -13,7 +13,13 @@ long long mul(int a, int b) {
 
 int main(int argc, char *argv[])
 {
-    printf("%lld\n", add(5, 7));
+    // returns long long, function pointer identifier (*func)
+    // takes two arguments int, int
+    long long (*func)(int, int);
+
+    func = &mul;
+    
+    printf("%lld\n", func(5, 7));
 
     return 0;
 }
