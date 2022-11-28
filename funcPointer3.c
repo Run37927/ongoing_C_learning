@@ -13,13 +13,20 @@ int mul(int x, int y)
     return x * y;
 }
 
-int main(int argc, char* argv[])
+// function shouldNotChange takes in a function pointer
+void shouldNotChange(int (*func)(int, int))
 {
     //  initiate random generator
     srand(time(NULL));
     int a = rand() % 100;
     int b = rand() % 100;
-    printf("the result of the operattion between  %d and %d is % d\n", a, b, sum(a, b));
+    printf("The result of the operattion between  %d and %d is % d\n", a, b, func(a, b));
+}
 
+int main(int argc, char* argv[])
+{
+
+    shouldNotChange(sum);
+    shouldNotChange(mul);
     return 0;
 }
