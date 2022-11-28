@@ -18,7 +18,9 @@ int main(int argc, char *argv[])
     long long (*func)(int, int);
 
     func = &mul;
-    
+    printf("%lld\n", func(5, 7));
+
+    func = &add;
     printf("%lld\n", func(5, 7));
 
     return 0;
