@@ -26,6 +26,30 @@ int divide(int x, int y)
     return x / y;
 }
 
+// this function decide which function to use
+// and returns a pointer to that function
+int (*selectOperation()) (int, int)
+{
+    int option = 0;
+    printf("select your favorite operation: \n");
+    printf("1) add\n");
+    printf("2) subtract\n");
+    printf("3) multiply\n");
+    printf("4) divide\n");
+    printf("enter a choice: ");
+    scanf("%d", option);
+    
+    if (option == 1)
+        return add;
+    else if (option == 2)
+        return subtract;
+    else if (option == 3)
+        return mul;
+    else if (option == 4)
+        return div;
+    else
+        return NULL;
+}
 
 int main()
 {
@@ -41,14 +65,16 @@ int main()
     // double result = addPointer(a, b);
     // printf("%.2f\n", result);
 
-    int (*array[])(int, int) = {add, subtract, mul, divide};
-    // array of function pointers
-    int product = (*array[2])(2, 4);
-    printf("product is %d\n", product);
+    // int (*array[])(int, int) = {add, subtract, mul, divide};
+    // // array of function pointers
+    // int product = (*array[2])(2, 4);
+    // printf("product is %d\n", product);
 
-    int subtractionResult = (*array[1])(1, 9);
-    printf("subtraction result is %d\n", subtractionResult);
+    // int subtractionResult = (*array[1])(1, 9);
+    // printf("subtraction result is %d\n", subtractionResult);
 
+    int (*operation)(int, int) = selectOperation();
 
+    printf("answer: %d\n", operation(20,5));
     return 0;
 }

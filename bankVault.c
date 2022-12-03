@@ -18,4 +18,4 @@ typedef struct {
 
 swag gold = {"GOLD!", 1000000.0};
 combination numbers = {&gold, "6502"};
-safe s = {numbers, "RAMACON250"};
+// safe s = {numbers, "RAMACON250"};
