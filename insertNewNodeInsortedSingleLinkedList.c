@@ -6,7 +6,6 @@ struct node {
     struct node *link;
 };
 
-
 struct node * insertAtBegin(struct node *head, int data) 
 {
     struct node *ptr =  (struct node *)malloc(sizeof(struct node));
@@ -33,8 +32,6 @@ void insertAtEnd(struct node *head, int data)
     }
     ptr->link = temp;
 }
-
-
 
 struct node * insert(struct node *head, int data) {
     struct node * temp;
